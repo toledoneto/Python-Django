@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Olá mundo</title>
+</head>
+<body>
+	<h1>Listagem</h1>
+	<ul>
+	{% for transaction in transactions %}
+		<li><a href="{% url 'url_update' transaction.id %}">{{ transaction.description }} - {{ transaction.value }} - {{ transaction.date }} - {{ transaction.category }}</a></li>
+	{% endfor %}
+
+	<a href="{% url 'url_newTransaction' %}">Nova Transação</a>
+	</ul>
+</body>
+</html>

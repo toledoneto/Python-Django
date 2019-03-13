@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form method="POST">
+	    {% csrf_token %}
+
+	    {{ form.as_p }}
+
+		<button type="submit">Salvar</button>
+
+		{% if transaction %}
+			<a href="{% url 'url_delete' transaction.id %}">Deletar</a>
+		{% endif %}
+</form>
+</body>
+</html>

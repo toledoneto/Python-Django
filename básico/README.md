@@ -1,0 +1,1 @@
+Aplicação simples para controle de gastos em HTML puro
